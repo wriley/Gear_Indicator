@@ -1,6 +1,6 @@
 //POVRay-File created by 3d41.ulp v20110101
 //Z:/Projects/simulator/Gear_Indicator/gear_indicator_v1_0.brd
-//1/14/2012 9:49:32 PM
+//1/14/2012 9:56:59 PM
 
 #version 3.5;
 
@@ -98,7 +98,7 @@
 #declare pcb_layer1_used = 1;
 #declare pcb_layer16_used = 1;
 #declare inc_testmode = off;
-#declare global_seed=seed(240);
+#declare global_seed=seed(670);
 #declare global_pcb_layer_dis = array[16]
 {
 	0.000000,
@@ -227,6 +227,28 @@ cylinder{<37.720000,0.095000,6.890000><37.720000,-1.595000,6.890000>1.498600 tex
 #end
 #if(pcb_parts=on)//Parts
 union{
+#ifndef(pack_C1) #declare global_pack_C1=yes; object {CAP_DIS_ELKO_2MM5_6MM3("0.33",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,0> translate<17.780000,0.000000,8.890000>}#end		//Elko 2,5mm Pitch, 6mm  Diameter, 11,2mm High C1 0.33 E2,5-6
+#ifndef(pack_C2) #declare global_pack_C2=yes; object {CAP_DIS_CERAMIC_25MM_50MM("0.1",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<12.700000,0.000000,8.890000>}#end		//ceramic disc capacitator C2 0.1 C025-025X050
+#ifndef(pack_C3) #declare global_pack_C3=yes; object {CAP_DIS_ELKO_2MM5_6MM3("1000",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,0.000000,0> rotate<0,0,0> translate<49.530000,0.000000,26.670000>}#end		//Elko 2,5mm Pitch, 6mm  Diameter, 11,2mm High C3 1000 E2,5-6
+#ifndef(pack_C4) #declare global_pack_C4=yes; object {CAP_DIS_CERAMIC_25MM_50MM("0.1",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,0> translate<45.720000,0.000000,10.160000>}#end		//ceramic disc capacitator C4 0.1 C025-025X050
+#ifndef(pack_C5) #declare global_pack_C5=yes; object {CAP_DIS_CERAMIC_25MM_50MM("0.1",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<33.020000,0.000000,16.510000>}#end		//ceramic disc capacitator C5 0.1 C025-025X050
+#ifndef(pack_C6) #declare global_pack_C6=yes; object {CAP_DIS_CERAMIC_25MM_50MM("0.1",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,0.000000,0> rotate<0,0,0> translate<11.430000,0.000000,12.700000>}#end		//ceramic disc capacitator C6 0.1 C025-025X050
+#ifndef(pack_C7) #declare global_pack_C7=yes; object {CAP_DIS_CERAMIC_25MM_50MM("0.1",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,0.000000,0> rotate<0,0,0> translate<25.400000,0.000000,12.700000>}#end		//ceramic disc capacitator C7 0.1 C025-025X050
+#ifndef(pack_IC2) #declare global_pack_IC2=yes; object {IC_DIS_DIP14("74ALS08N","ST",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-270.000000,0> rotate<0,0,0> translate<11.430000,0.000000,22.860000>translate<0,3.000000,0> }#end		//DIP14 IC2 74ALS08N DIL14
+#ifndef(pack_IC2) object{SOCKET_DIP14()rotate<0,-270.000000,0> rotate<0,0,0> translate<11.430000,0.000000,22.860000>}#end					//IC-Sockel 14Pin IC2 74ALS08N
+#ifndef(pack_IC3) #declare global_pack_IC3=yes; object {IC_DIS_DIP14("74ALS04N","ST",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-270.000000,0> rotate<0,0,0> translate<25.400000,0.000000,22.860000>translate<0,3.000000,0> }#end		//DIP14 IC3 74ALS04N DIL14
+#ifndef(pack_IC3) object{SOCKET_DIP14()rotate<0,-270.000000,0> rotate<0,0,0> translate<25.400000,0.000000,22.860000>}#end					//IC-Sockel 14Pin IC3 74ALS04N
+#ifndef(pack_IC4) #declare global_pack_IC4=yes; object {TR_TO220_3_V("7805TV",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,0> translate<15.240000,0.000000,1.270000>}#end		//TO220 vertical straight leads IC4 7805TV TO220V
+#ifndef(pack_R1) #declare global_pack_R1=yes; object {RES_DIS_0207_10MM(texture{pigment{DarkBrown}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Black}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Orange}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-270.000000,0> rotate<0,0,0> translate<33.020000,0.000000,25.400000>}#end		//Discrete Resistor 0,3W 10MM Grid R1 10K 0207/10
+#ifndef(pack_R3) #declare global_pack_R3=yes; object {RES_DIS_0207_10MM(texture{pigment{DarkBrown}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Black}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Red*0.7}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,0> translate<43.180000,0.000000,30.480000>}#end		//Discrete Resistor 0,3W 10MM Grid R3 1K 0207/10
+#ifndef(pack_R4) #declare global_pack_R4=yes; object {RES_DIS_0207_10MM(texture{pigment{DarkBrown}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Black}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Orange}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<38.100000,0.000000,22.860000>}#end		//Discrete Resistor 0,3W 10MM Grid R4 10K 0207/10
+#ifndef(pack_R5) #declare global_pack_R5=yes; object {RES_DIS_0207_10MM(texture{pigment{DarkBrown}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Black}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Orange}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<7.620000,0.000000,40.640000>}#end		//Discrete Resistor 0,3W 10MM Grid R5 10K 0207/10
+#ifndef(pack_R6) #declare global_pack_R6=yes; object {RES_DIS_0207_10MM(texture{pigment{Yellow}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Violet*1.2}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Red*0.7}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<31.750000,0.000000,40.640000>}#end		//Discrete Resistor 0,3W 10MM Grid R6 4K7 0207/10
+#ifndef(pack_R7) #declare global_pack_R7=yes; object {RES_DIS_0207_10MM(texture{pigment{Yellow}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Violet*1.2}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Red*0.7}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<11.430000,0.000000,40.640000>}#end		//Discrete Resistor 0,3W 10MM Grid R7 4K7 0207/10
+#ifndef(pack_R8) #declare global_pack_R8=yes; object {RES_DIS_0207_10MM(texture{pigment{Yellow}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Violet*1.2}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture{pigment{Red*0.7}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}},texture {T_Gold_5C finish{reflection 0.1}},)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<21.590000,0.000000,40.640000>}#end		//Discrete Resistor 0,3W 10MM Grid R8 4K7 0207/10
+#ifndef(pack_T1) #declare global_pack_T1=yes; object {TR_TO92_G("2N3904",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<26.670000,0.000000,45.720000>}#end		//TO92 bend vertical T1 2N3904 TO92
+#ifndef(pack_T2) #declare global_pack_T2=yes; object {TR_TO92_G("2N3904",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<36.830000,0.000000,45.720000>}#end		//TO92 bend vertical T2 2N3904 TO92
+#ifndef(pack_T3) #declare global_pack_T3=yes; object {TR_TO92_G("2N3904",)translate<0,0,0> rotate<0,0.000000,0>rotate<0,-90.000000,0> rotate<0,0,0> translate<16.510000,0.000000,45.720000>}#end		//TO92 bend vertical T3 2N3904 TO92
 }//End union
 #end
 #if(pcb_pads_smds=on)
@@ -1983,3 +2005,11 @@ rotate pcb_rotdir*180
 
 
 //Parts not found in 3dpack.dat or 3dusrpac.dat are:
+//IC1	NE555	DIL-08
+//J1		POWER_JACK_PTH
+//J2		TERMBLOCKX8
+//R2	15K	B25P
+//U$1		STAND-OFF
+//U$2		STAND-OFF
+//U$3		STAND-OFF
+//U$4		STAND-OFF
