@@ -186,7 +186,8 @@ camera
 {
 	location <cam_x,cam_y,cam_z>
 	look_at <cam_look_x,cam_look_y,cam_look_z>
-	angle cam_a
+	angle cam_a   
+	right 1.7777*x
 	//translates the camera that <0,0,0> is over the Eagle <0,0>
 	//translate<-27.775000,0,-31.745000>
 }
